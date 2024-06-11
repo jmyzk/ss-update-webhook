@@ -10,6 +10,8 @@ topic_name = 'ss-webhook'
 
 def ss_webhook_responder(request):
     request_json = request.get_json()
+    print('==============================')
+    print('verification request by smartsheet - request_json', request_json)
 
     # for a webhook challenge, return verification
     if request.args and "challenge" in request.args:
